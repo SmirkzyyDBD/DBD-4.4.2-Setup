@@ -3,7 +3,8 @@ import requests
 from zipfile import ZipFile
 import urllib.parse
 import ctypes
-from url import 
+from url import fileURL
+
 def set_console_title(title):
     ctypes.windll.kernel32.SetConsoleTitleW(title)
 
@@ -43,7 +44,7 @@ def get_path():
             return dbd_path
 
 if __name__ == "__main__":
-    download_url = "https://cdn.discordapp.com/attachments/1184987629083705455/1216873281593020456/442_Launcher_Update_-_GrabSteamURL.zip?ex=6601f88e&is=65ef838e&hm=094371c004c4a5e0cfde59934c356e046e21299e45d288cd6762b26a1e119822&"
+    download_url = fileURL
     
     DbD_path = get_path()
     
